@@ -1,0 +1,6 @@
+numero=input('Primeiro numero: ')
+numero2=input('Segundo numero: ')
+numero3=input('Terceiro numero: ')
+conta=int(numero)+int(numero2)-int(numero3)
+print(numero,'+' ,numero2,'-',numero3,'=', conta)
+print(' Obrigado por testar a calculadora feita no python :) ')
