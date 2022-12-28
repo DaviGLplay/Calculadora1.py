@@ -3,11 +3,11 @@ import math
 def Calculadora():
 
     op = input(
-        'Quel tipo de calculo você quer fazer?\
-        \n Escolha entre: "+, -, *, /" : ')
+        '\033[1;33;34mQuel tipo de calculo você quer fazer?\
+        \n Escolha entre: "+,  -,  *,  / :\033[m')
 
-    a = int(input('Primeiro numero: '))
-    b = int(input('Segundo numero: '))
+    a = int(input('\033[4;33;37mPrimeiro numero:\033[m '))
+    b = int(input('\033[4;33;37mSegundo numero: \033[m'))
 
     if op == '+':
         return str(a) + ' ' + op + ' ' + str(b) + ' = ' + str(a + b)
@@ -17,25 +17,31 @@ def Calculadora():
         return str(a) + ' ' + op + ' ' + str(b) + ' = ' + str(a * b)
     elif op == '/':
         if b == 0:
-            return 'Erro, não use 0 na divisão'
+            return '\033[1;33;31mErro:\033[m\
+Nao use 0 no divisor, \
+Obrigado pela atenção :) '
         else:
             return str(a) + ' ' + op + ' ' + str(b) + ' = ' + str(a / b)
     else:
-        return "Erro: O [0] nao pode ser dividido| Erro nao use [×] e [÷], use isso [*] para mutiplicação e isso [/'']Para divisão     "
+        return "\033[1;33;31mErro:\033[1;33;30mescolha entre as opções que estão na pergunta,\
+    \nObrigado pela atenção :)\033[m"
 
 def main():  # Wrapper function
 
-    print("""Calculadora python""")
-    choice = int(input('Digite 1 para começar: '))
+    print("""\033[1;33;31mCalculadora python\033[m""")
+    choice = int(input('\033[1;33;32mDigite 1 para começar:\033[m'))
 
     if choice == 1:
         print(Calculadora())
     else:
-        print('O comando nao sera executado se nao digitar 1')
+        print('\033[4;33;33mO comando nao sera executado se nao digitar 1\033[m')
 
 
 if __name__ == '__main__':
     main()
-    
-    
-print('Obrigado por usar a calculadora feita no python :)')
+print('\n')
+print('OBRIGADO POR USAR A CALCULADORA FEITA NO PYTHON')
+
+
+
+
